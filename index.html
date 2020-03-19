@@ -238,10 +238,10 @@ Requirements:
 <!-- <li>Twisted &gt;= 13.0.0</li> -->
 <!-- <li>Zope.interface &gt;= 3.8.0</li> -->
 <br>
-<h4>Automatic deployment</h4>
-Create user <code>iBTC</code>:
-<pre><code>adduser iBTC &amp;&amp; usermod -aG sudo iBTC
-su iBTC</code></pre>
+<h4>Requirements node v0.10+</h4>
+# Using <code>Ubuntu</code>:
+<pre><code>sudo apt remove nodejs <br> curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+     sudo apt-get install -y nodejs</code></pre>
 Download and prepare deployment script:
 <pre><code>cd ~
 git clone https://github.com/NullFunctor/node-stratum-pool.git
