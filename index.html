@@ -122,12 +122,12 @@ Multiple developers build from source code by following a specific descriptor ("
 <p>Download and install the latest version of Vagrant from <a href="https://www.vagrantup.com/downloads.html">here</a>.</p>
 <h4>VirtualBoX</h4>
 <p>Download and install the latest version of VirtualBox from <a href="https://www.virtualbox.org/wiki/Downloads">here</a>.</p>
-<h4>Ansible</h4>
+<h4>Install Dependencies</h4>
 Install prerequisites
-<pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor
-brew install git
-sudo easy_install pip
+<pre><code>sudo apt-get install build-essential"
+sudo apt-get install autoconf libtool pkg-config libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libevent-dev libqt4-dev libcanberra-gtk-module
+sudo apt-get update
+sudo apt-get upgrade
 </code></pre>
 Setup Ansible
 <pre><code>sudo pip install ansible</code></pre>
