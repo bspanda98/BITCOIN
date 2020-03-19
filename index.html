@@ -114,7 +114,7 @@ LTC <code>ltc1qgyasr5lm3kz5aq7u6tqsyy5f7uqrd29yepevpl</code><br>
 </ul>
 </section>
 <h2>iBTC source</h2>
-<p>Use <a href="https://github.com/NullFunctor/iBTC/blob/master/doc/developer-notes.md">iBTC aims </a> to be a more decentralized version of Bitcoin. <a href="https://www.vagrantup.com/">Vagrant</a> and <a href="https://www.virtualbox.org/">VirtualBox</a> with <a href="https://www.ansible.com/">Ansible</a>. This section covers build process on macOS (<a href="https://github.com/AXErunners/axe-gitian#requirements">linux</a> instructions). executables are really built from the exact source on GitHub and have not been tampered with. It also makes sure that the same, tested dependencies are used and statically built into the executable.
+<p>Use <a href="https://github.com/NullFunctor/iBTC/blob/master/doc/developer-notes.md">iBTC aims </a> to be a more decentralized version of Bitcoin. <a href="https://www.vagrantup.com/">Vagrant</a> and <a href="https://www.virtualbox.org/">VirtualBox</a> with <a href="https://www.ansible.com/">Ansible</a>. This section covers build process on macOS (<a href="https://github.com/bitcoin-core/docs/blob/master/gitian-building.md">linux</a> instructions). executables are really built from the exact source on GitHub and have not been tampered with. It also makes sure that the same, tested dependencies are used and statically built into the executable.
 Multiple developers build from source code by following a specific descriptor ("recipe"), cryptographically sign the result, and upload the resulting signature. These results are compared and only if they match is the build is accepted.</p>
 <h4>GnuPG</h4>
 <p>Download and install the latest version of GPG Suite from <a href="https://gpgtools.org">here</a>.</p>
@@ -124,8 +124,7 @@ Multiple developers build from source code by following a specific descriptor ("
 <p>Download and install the latest version of VirtualBox from <a href="https://www.virtualbox.org/wiki/Downloads">here</a>.</p>
 <h4>Install Dependencies</h4>
 Install prerequisites
-<pre><code>sudo apt-get install build-essential"
-sudo apt-get install autoconf libtool pkg-config libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libevent-dev libqt4-dev libcanberra-gtk-module
+<pre><code>"sudo apt-get install build-essential"
 sudo apt-get update
 sudo apt-get upgrade
 </code></pre>
@@ -149,7 +148,7 @@ gpg_key_name: 'F16219F4C23F91112E9C734A8DFCBF8E5A4D8019'
 # OPTIONAL set to import your SSH key into the VM. Example: id_rsa, id_ed25519. Assumed to reside in ~/.ssh
 ssh_key_name: ''
 </code></pre>
-<p>Place <a href="https://github.com/AXErunners/axe/blob/master/doc/README_osx.md">Apple SDK</a> tarball (<code>MacOSX10.11.sdk.tar.gz</code>) into <code>axe-gitian</code> folder for macOS builds.</p>
+<p>Place <a href="https://github.com/bitcoin-core/docs/blob/master/gitian-building.md">Apple SDK</a> tarball (<code>MacOSX10.11.sdk.tar.gz</code>) into <code>iBTC-gitian</code> folder for macOS builds.</p>
 <p>Start the build with <code>vagrant up --provision IBTC-build</code>.</p>
 <p>Then connect to the box with <code>vagrant ssh IBTC-build</code>.</p>
 Prepare the container and start building with:
@@ -171,15 +170,15 @@ Prepare the container and start building with:
 <li><a href="https://github.com/AXErunners/electrum-axe/releases/latest" class="button icon fa-download">binaries</a></li>
 </ul>
 </section>
-<p>iBTC Electrum is a lightweight client for iBTC network. Check with AXE <a href="https://github.com/AXErunners/axe/wiki/SPV">wiki</a> for more details. The source code is available at <a href="https://github.com/AXErunners" class="user-mention">@AXErunners</a>' GitHub <a href="https://github.com/AXErunners/electrum-axe">repository</a>.<br>
+<p>iBTC Electrum is a lightweight client for iBTC network. Check with iBTC <a href="https://github.com/bitcoin-core/bitcoin-devwiki">wiki</a> for more details. The source code is available at <a href="https://github.com/NullFunctor/iBTC" class="user-mention">@iBTC</a>' GitHub <a href="https://github.com/NullFunctor/electrum">repository</a>.<br>
 <br>
 <figure>
-<a href="https://raw.githubusercontent.com/AXErunners/media/master/etc/axe-electrum-v3382linux-scrnsht.png"><img src="https://raw.githubusercontent.com/AXErunners/media/master/etc/axe-electrum-v3382linux-scrnsht.png" alt="axe-electrum on macOS" style="width: 95%;"></a>
-<figcaption>Axe Electrum on Ubuntu 19</figcaption>
+<a ><img src="images/ibtc.PNG" alt="axe-electrum on macOS" style="width: 95%;"></a>
+<figcaption>iBTC Electrum on Ubuntu 19</figcaption>
 </figure>
 </p>
 <h3>Usage</h3>
-<p>Download binaries or follow this <a href="https://github.com/AXErunners/electrum-axe#getting-started">guide</a> to install iBTC Electrum from source on your system.</p>
+<p>Download binaries or follow this <a href="https://github.com/NullFunctor/electrum#getting-started">guide</a> to install iBTC Electrum from source on your system.</p>
 <h2 class="major">electrumx</h2>
 ElectrumX is a server-side application for iBTC <a href="https://github.com/AXErunners/axe/wiki/SPV">SPV</a> protocol. The current version requires precise system configuration and is not fully automated for fast deployment. The script below is used for fast and easy setup of electrumx server on working AXE core node.
 To start, input following line:
