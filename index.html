@@ -239,10 +239,7 @@ Create user <code>axerunner</code>:
 <pre><code>adduser ibtc &amp;&amp; usermod -aG sudo axerunner
 su axerunner</code></pre>
 Download and prepare deployment script:
-<pre><code> # Using Ubuntu
-sudo apt remove nodejs
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs </code></pre>
+
 <pre><code>cd ~
 git clone git clone https://github.com/NullFunctor/node-stratum-pool.git node_modules/stratum-pool
 cd node_modules/stratum-pool
