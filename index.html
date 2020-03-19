@@ -67,7 +67,7 @@
 <li>confirmations: 6</li>
 <li>spacing: 2.5 min</li>
 <li>difficulty: LWMA</li>
-<li>block size: 2MB</li>
+<li>block size: 1MB</li>
 <li>port: 7333</li>
 <li>rpc port: 9332</li>
 </ul>
@@ -96,9 +96,9 @@
 </ul>
 <h4>Support the development</h4>
 <ul>
-iBTC <code>7mLZCucekeWCXYaiR93BThq9TdYc1ZS7Tw</code><br>
-BTC <code>32NDo6qd8KxvnDizseqBAAox5TM8rLmMiJ</code><br>
-LTC <code>LdihK8mesqJ1Pm11zBqtJW2SmksdgGMuNd</code><br>
+iBTC <code>19e8sPPFxAL23hUF3yAHgp6NfqgUp9E7oF</code><br>
+BTC <code>19e8sPPFxAL23hUF3yAHgp6NfqgUp9E7oF</code><br>
+LTC <code>ltc1qgyasr5lm3kz5aq7u6tqsyy5f7uqrd29yepevpl</code><br>
 </ul>
 
 <!-- about section -->
@@ -108,13 +108,14 @@ LTC <code>LdihK8mesqJ1Pm11zBqtJW2SmksdgGMuNd</code><br>
 </article>
 <article id="core">
 <h2 class="major">core</h2>
-<span class="image main"><img src="images/axecore-ascii-screenshot.png" alt=""></span>
+<span class="image main"><img src="images/core.PNG" alt=""></span>
 <section><ul class="actions">
 <li><a href="https://github.com/NullFunctor/iBTC/releases" class="button icon fa-download">binaries</a></li>
 </ul>
 </section>
 <h2>iBTC source</h2>
-<p>Use <a href="https://github.com/NullFunctor/iBTC/blob/master/doc/developer-notes.md">iBTC aims </a> to be a more decentralized version of Bitcoin. <a href="https://www.vagrantup.com/">Vagrant</a> and <a href="https://www.virtualbox.org/">VirtualBox</a> with <a href="https://www.ansible.com/">Ansible</a>. This section covers build process on macOS (<a href="https://github.com/AXErunners/axe-gitian#requirements">linux</a> instructions). Gitian provides a way to be reasonably certain that the AXE executables are really built from the exact source on GitHub and have not been tampered with. It also makes sure that the same, tested dependencies are used and statically built into the executable.
+<p>Use <a href="https://github.com/NullFunctor/iBTC/blob/master/doc/developer-notes.md">iBTC aims </a> to be a more decentralized version of Bitcoin. <a href="https://www.vagrantup.com/">Vagrant</a> and <a href="https://www.virtualbox.org/">VirtualBox</a> with <a href="https://www.ansible.com/">Ansible</a>. 
+     This section covers build process on macOS (<a href="https://github.com/bitcoin-core/docs/blob/master/gitian-building.md">linux</a> instructions). Gitian provides a way to be reasonably certain that the iBTC executables are really built from the exact source on GitHub and have not been tampered with. It also makes sure that the same, tested dependencies are used and statically built into the executable.
 Multiple developers build from source code by following a specific descriptor ("recipe"), cryptographically sign the result, and upload the resulting signature. These results are compared and only if they match is the build is accepted.</p>
 <h4>GnuPG</h4>
 <p>Download and install the latest version of GPG Suite from <a href="https://gpgtools.org">here</a>.</p>
@@ -149,7 +150,7 @@ gpg_key_name: 'F16219F4C23F91112E9C734A8DFCBF8E5A4D8019'
 # OPTIONAL set to import your SSH key into the VM. Example: id_rsa, id_ed25519. Assumed to reside in ~/.ssh
 ssh_key_name: ''
 </code></pre>
-<p>Place <a href="https://github.com/AXErunners/axe/blob/master/doc/README_osx.md">Apple SDK</a> tarball (<code>MacOSX10.11.sdk.tar.gz</code>) into <code>axe-gitian</code> folder for macOS builds.</p>
+<p>Place <a href="https://github.com/bitcoin-core/docs/blob/master/gitian-building.md">Apple SDK</a> tarball (<code>MacOSX10.11.sdk.tar.gz</code>) into <code>axe-gitian</code> folder for macOS builds.</p>
 <p>Start the build with <code>vagrant up --provision IBTC-build</code>.</p>
 <p>Then connect to the box with <code>vagrant ssh IBTC-build</code>.</p>
 Prepare the container and start building with:
@@ -168,20 +169,20 @@ Prepare the container and start building with:
 <h2 class="major">electrum</h2>
 <span class="image main"><img src="images/cntrls.jpg" alt=""></span>
 <section><ul class="actions">
-<li><a href="https://github.com/AXErunners/electrum-axe/releases/latest" class="button icon fa-download">binaries</a></li>
+<!-- <li><a href="https://github.com/NullFunctor/electrum/releases/latest" class="button icon fa-download">binaries</a></li> -->
 </ul>
 </section>
-<p>iBTC Electrum is a lightweight client for iBTC network. Check with AXE <a href="https://github.com/AXErunners/axe/wiki/SPV">wiki</a> for more details. The source code is available at <a href="https://github.com/AXErunners" class="user-mention">@AXErunners</a>' GitHub <a href="https://github.com/AXErunners/electrum-axe">repository</a>.<br>
+<p>iBTC Electrum is a lightweight client for iBTC network. Check with AXE <a href="https://github.com/bitcoin-core/bitcoin-devwik">wiki</a> for more details. The source code is available at <a href="https://github.com/AXErunners" class="user-mention">@AXErunners</a>' GitHub <a href="https://github.com/AXErunners/electrum-axe">repository</a>.<br>
 <br>
 <figure>
-<a href="https://raw.githubusercontent.com/AXErunners/media/master/etc/axe-electrum-v3382linux-scrnsht.png"><img src="https://raw.githubusercontent.com/AXErunners/media/master/etc/axe-electrum-v3382linux-scrnsht.png" alt="axe-electrum on macOS" style="width: 95%;"></a>
-<figcaption>Axe Electrum on Ubuntu 19</figcaption>
+<a><img src="images/ibtc.PNG" alt="axe-electrum on macOS" style="width: 95%;"></a>
+<figcaption>iBTC Electrum on Ubuntu 19</figcaption>
 </figure>
 </p>
 <h3>Usage</h3>
-<p>Download binaries or follow this <a href="https://github.com/AXErunners/electrum-axe#getting-started">guide</a> to install Axe Electrum from source on your system.</p>
+<p>Download binaries or follow this <a href="https://github.com/NullFunctor/electrum#getting-started">guide</a> to install Axe Electrum from source on your system.</p>
 <h2 class="major">electrumx</h2>
-ElectrumX is a server-side application for iBTC <a href="https://github.com/AXErunners/axe/wiki/SPV">SPV</a> protocol. The current version requires precise system configuration and is not fully automated for fast deployment. The script below is used for fast and easy setup of electrumx server on working AXE core node.
+ElectrumX is a server-side application for iBTC <a href="https://github.com/bitcoin-core/bitcoin-devwik">SPV</a> protocol. The current version requires precise system configuration and is not fully automated for fast deployment. The script below is used for fast and easy setup of electrumx server on working AXE core node.
 To start, input following line:
 <pre><code>wget https://raw.githubusercontent.com/bauerj/electrumx-installer/master/bootstrap.sh -O - | bash</code></pre>
 Finish the configuration by adding your iBTC node's RPC login/pass in DAEMON_URL as <code>user:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aadacbd9d9ea">[email&#160;protected]</a><vps ip>:<rpcport>/</rpcport></vps></code>
@@ -230,18 +231,18 @@ Use <a href="https://axe-p2pool-scanner.arcpool.com">p2pool-scanner</a> to find 
 </p>
 <h3 class="major">p2pool</h3>
 Requirements:
-<li>axed &gt;= 1.4.0.2</li>
-<li>Python &gt;= 2.7</li>
-<li>Twisted &gt;= 13.0.0</li>
-<li>Zope.interface &gt;= 3.8.0</li>
+<li>node &gt;= 0.10+</li>
+<!-- <li>Python &gt;= 2.7</li> -->
+<!-- <li>Twisted &gt;= 13.0.0</li> -->
+<!-- <li>Zope.interface &gt;= 3.8.0</li> -->
 <br>
 <h4>Automatic deployment</h4>
-Create user <code>axerunner</code>:
-<pre><code>adduser axerunner &amp;&amp; usermod -aG sudo axerunner
-su axerunner</code></pre>
+Create user <code>iBTC</code>:
+<pre><code>adduser iBTC &amp;&amp; usermod -aG sudo iBTC
+su iBTC</code></pre>
 Download and prepare deployment script:
 <pre><code>cd ~
-git clone https://github.com/axerunners/p2pool-axe-deploy
+git clone https://github.com/NullFunctor/node-stratum-pool.git
 nano ./p2pool-axe-deploy/p2pool.deploy.sh</code></pre>
 Edit the script to match your setup:
 <li>
@@ -268,7 +269,7 @@ Install dependencies:
 sudo apt-get install git python-zope.interface python-twisted python-twisted-web
 sudo apt-get install gcc g++</code></pre>
 Install p2pool:
-<pre><code>cd ~ &amp;&amp; git clone --recursive https://github.com/AXErunners/p2pool-axe.git
+<pre><code>cd ~ &amp;&amp; git clone --recursive https://github.com/NullFunctor/node-stratum-pool.git
 cd p2pool-axe/axe_hash &amp;&amp; python setup.py install --user</code></pre>
 Install front-end:
 <pre><code>cd ..
@@ -354,9 +355,9 @@ For additional options:
 
 <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" type="text/javascript"></script> 
-<script src="/assets/js/browser.min.js" type="text/javascript"></script>
-<script src="/assets/js/breakpoints.min.js" type="text/javascript"></script>
-<script src="/assets/js/util.js" type="text/javascript"></script>
-<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="assets/js/browser.min.js" type="text/javascript"></script>
+<script src="assets/js/breakpoints.min.js" type="text/javascript"></script>
+<script src="assets/js/util.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="96cc68ebc1af0b4016661b52-|49" defer=""></script></body>
 </html>
