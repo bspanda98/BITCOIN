@@ -130,10 +130,10 @@ sudo apt-get upgrade
 </code></pre>
 Setup Ansible
 <pre><code>sudo pip install ansible</code></pre>
-<h3>iBTC ubuntu core build</h3>
+<h3>iBTC-GITIAN</h3>
 <pre><code>git clone https://github.com/NullFunctor/iBTC.git
 cd IBTC
-</code></pre>
+<!--</code></pre>
 Edit your <code>gitian.yml</code> file:
 <pre><code>
 # URL of repository containing iBTC source code.
@@ -147,7 +147,7 @@ gpg_key_name: 'F16219F4C23F91112E9C734A8DFCBF8E5A4D8019'
 
 # OPTIONAL set to import your SSH key into the VM. Example: id_rsa, id_ed25519. Assumed to reside in ~/.ssh
 ssh_key_name: ''
-</code></pre>
+</code></pre>-->
 <p>Place <a href="https://github.com/bitcoin-core/docs/blob/master/gitian-building.md">Apple SDK</a> tarball (<code>MacOSX10.11.sdk.tar.gz</code>) into <code>iBTC-gitian</code> folder for macOS builds.</p>
 <p>Start the build with <code>vagrant up --provision IBTC-build</code>.</p>
 <p>Then connect to the box with <code>vagrant ssh IBTC-build</code>.</p>
