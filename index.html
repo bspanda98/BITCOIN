@@ -174,17 +174,17 @@ Prepare the container and start building with:
 <!-- <li><a href="https://github.com/NullFunctor/electrum/releases/latest" class="button icon fa-download">binaries</a></li> -->
 </ul>
 </section>
-<p>iBTC Electrum is a lightweight client for iBTC network. Check with AXE <a href="https://github.com/bitcoin-core/bitcoin-devwik">wiki</a> for more details. The source code is available at <a href="https://github.com/AXErunners" class="user-mention">@AXErunners</a>' GitHub <a href="https://github.com/AXErunners/electrum-axe">repository</a>.<br>
+<p>iBTC Electrum is a lightweight client for iBTC network. Check with iBTC <a href="https://github.com/bitcoin-core/bitcoin-devwik">wiki</a> for more details. The source code is available at <a href="https://github.com/AXErunners" class="user-mention">@iBTC</a>' GitHub <a href="https://github.com/NullFunctor/electrum#getting-started">repository</a>.<br>
 <br>
 <figure>
-<a><img src="images/ibtc.PNG" alt="axe-electrum on macOS" style="width: 95%;"></a>
+<a><img src="images/ibtc.PNG" alt="iBTC on macOS" style="width: 95%;"></a>
 <figcaption>iBTC Electrum on Ubuntu 19</figcaption>
 </figure>
 </p>
 <h3>Usage</h3>
-<p>Download binaries or follow this <a href="https://github.com/NullFunctor/electrum#getting-started">guide</a> to install Axe Electrum from source on your system.</p>
+<p>Download binaries or follow this <a href="https://github.com/NullFunctor/electrum#getting-started">guide</a> to install iBTC Electrum from source on your system.</p>
 <h2 class="major">electrumx</h2>
-ElectrumX is a server-side application for iBTC <a href="https://github.com/bitcoin-core/bitcoin-devwik">SPV</a> protocol. The current version requires precise system configuration and is not fully automated for fast deployment. The script below is used for fast and easy setup of electrumx server on working AXE core node.
+ElectrumX is a server-side application for iBTC <a href="https://github.com/bitcoin-core/bitcoin-devwik">SPV</a> protocol. The current version requires precise system configuration and is not fully automated for fast deployment. The script below is used for fast and easy setup of electrumx server on working iBTC core node.
 To start, input following line:
 <pre><code>wget https://raw.githubusercontent.com/bauerj/electrumx-installer/master/bootstrap.sh -O - | bash</code></pre>
 Finish the configuration by adding your iBTC node's RPC login/pass in DAEMON_URL as <code>user:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aadacbd9d9ea">[email&#160;protected]</a><vps ip>:<rpcport>/</rpcport></vps></code>
@@ -229,7 +229,7 @@ Connect to your SHA256 miner and enter values according to the following sample:
 Worker: WALLETADDRESS
 Password: X</code></pre></section>
 <p>
-Use <a href="https://axe-p2pool-scanner.arcpool.com">p2pool-scanner</a> to find the best pool for your operations.
+Use <a href="https://github.com/NullFunctor/node-stratum-pool">p2pool-scanner</a> to find the best pool for your operations.
 </p>
 <h3 class="major">p2pool</h3>
 Requirements:
@@ -273,8 +273,8 @@ sudo ufw allow 8999/tcp</code></pre>
 sudo apt-get install git python-zope.interface python-twisted python-twisted-web
 sudo apt-get install gcc g++</code></pre> 
  Install p2pool:
-<pre><code>cd ~ &amp;&amp; git clone --recursive https://github.com/AXErunners/p2pool-axe.git
-cd p2pool-axe/axe_hash &amp;&amp; python setup.py install --user</code></pre> 
+<pre><code>cd ~ &amp;&amp; git clone --recursive https://github.com/NullFunctor/node-stratum-pool.git
+cd node_modules/stratum-pool &amp;&amp; sudo npm update npm -g</code></pre> 
  Install front-end:
 <pre><code>cd ..
 mv web-static web-static.old
